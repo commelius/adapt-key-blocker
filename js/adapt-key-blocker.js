@@ -5,7 +5,7 @@ define(function (require) {
         handler = function (e) {
             //IF NOT TAB KEY, RETURN
             if (!locked[e.which]) return;
-            console.log(e.which+" KEY PREVENTED");
+            console.log("KEY CODE PREVENTED: " + e.which);
             e.preventDefault();
             e.stopPropagation();
             return false;
@@ -14,7 +14,7 @@ define(function (require) {
     $('body').on("keydown", handler);
 
 
-        //initialize
+    //initialize
     Adapt.once('app:dataReady', function () {
         var model = Adapt.config.get('_keyBlocker');
         //console.log("adapt-key-blocker", "dataReady", model);
@@ -24,8 +24,8 @@ define(function (require) {
             return;
         } else {
             //update keys to lock
-            if(model.keys) {
-                for(var i=0, max=model.keys.length; i<max; i++) {
+            if (model.keys) {
+                for (var i = 0, max = model.keys.length; i < max; i++) {
                     locked[model.keys[i]] = true;
                 }
             }
