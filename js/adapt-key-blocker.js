@@ -5,7 +5,7 @@ define(function (require) {
         handler = function (e) {
             //IF NOT TAB KEY, RETURN
             if (!locked[e.which]) return;
-            console.log("TAB KEY PREVENTED");
+            console.log(e.which+" KEY PREVENTED");
             e.preventDefault();
             e.stopPropagation();
             return false;

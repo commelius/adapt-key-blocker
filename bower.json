@@ -1,6 +1,6 @@
 {
     "name": "adapt-key-blocker",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Keyboard key blocker",
     "main": "/js/adapt-key-blocker.js",
     "keywords": [
