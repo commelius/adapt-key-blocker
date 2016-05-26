@@ -3,7 +3,7 @@ define(function (require) {
     var Adapt = require("coreJS/adapt"),
         locked = {},
         handler = function (e) {
-            //IF NOT TAB KEY, RETURN
+            //IF NOT KEY TO BLOCK, RETURN
             if (!locked[e.which]) return;
             console.log("KEY CODE PREVENTED: " + e.which);
             e.preventDefault();
